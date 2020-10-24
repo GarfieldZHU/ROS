@@ -12,5 +12,8 @@ panic = "abort"
 [profile.release]
 panic = "abort"
 
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
+
 [dependencies]
 bootloader = "0.9.11"
